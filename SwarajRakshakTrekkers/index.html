@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>पन्हाळा ते पावनखिंड २०२६ | स्वराज्य रक्षक ट्रेकर्स</title>
+  <!-- Bootstrap 5 CSS Framework for Modern Styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary-color: #ff5e00;
+      --secondary-color: #b30000;
+      --dark-bg: #1a1e21;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* Modern Glassmorphic Navbar */
+    .navbar {
+      background: rgba(20, 24, 27, 0.98) !important;
+      backdrop-filter: blur(5px);
+      border-bottom: 3px solid var(--primary-color);
+    }
+    .navbar-brand img {
+      max-height: 3.5rem;
+      width: auto;
+      border-radius: 4px;
+    }
+    .nav-link {
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    /* Fixed Premium Hero Section with Suitable Background Overlay */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(31, 13, 4, 0.92), rgba(15, 23, 30, 0.95)), 
+                  repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 10px);
+      background-color: var(--dark-bg);
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 3.5rem 1rem;
+      border-bottom: 4px solid #de6b00;
+    }
+    .hero h1 {
+      font-weight: 800;
+      text-shadow: 2px 3px 6px rgba(0,0,0,0.5);
+      color: #fff;
+    }
+    .hero h2 {
+      color: #ffcd39;
+      font-weight: 700;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.4);
+    }
+    .hero-badge {
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      padding: 0.6rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
+    }
+
+    /* Modern Card Layouts */
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+    }
+    .card-header-trek {
+      background: linear-gradient(135deg, #2c3e50, #1a252f);
+      color: white;
+      font-weight: bold;
+      padding: 1.1rem;
+      font-size: 1.1rem;
+    }
+    .list-group-item {
+      padding: 1.1rem;
+      border-color: #ebebeb;
+    }
+
+    /* Sticky Registration Button - Fixed with Bootstrap 5 compatibility[cite: 1] */
+    #register-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 1000;
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(25, 135, 84, 0.4);
+      transition: all 0.3s ease;
+    }
+    #register-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Custom Section Highlights */
+    .section-title {
+      position: relative;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 3.5px;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+    }
+    
+    .icon-bullet {
+      color: var(--primary-color);
+      margin-right: 10px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Scroll spy to toggle Floating Registration Button
+      window.addEventListener("scroll", function() {
+        const regBtn = document.getElementById("register-button");
+        if (window.scrollY > 150) {
+          regBtn.classList.remove("d-none");
+        } else {
+          regBtn.classList.add("d-none");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Floating Sticky Action Button - Fixed with data-bs tags[cite: 1] -->
+  <a data-bs-toggle="modal" data-bs-target="#exampleModal" id="register-button" class="btn btn-success d-none">
+    <i class="fa-solid fa-file-pen me-2"></i><b>आत्ताच नावनोंदणी करा</b>
+  </a>
+
+  <!-- Modern Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <!-- logo.jpg.jpg referenced verbatim[cite: 1, 2] -->
+        <img src="logo.jpeg" alt="स्वराज्य रक्षक ट्रेकर्स लोगो">      
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#details">मोहिमेचे स्वरूप</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">वेळापत्रक</a></li>
+          <li class="nav-item"><a class="nav-link" href="#things-to-bring">सोबत आणावयाचे साहित्य</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rules">नियम व अटी</a></li>  
+          <li class="nav-item"><a class="nav-link" href="#contact">संपर्क</a></li>      
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Clean, Stable Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge mb-3 d-inline-block text-uppercase">स्वराज्य रक्षक ट्रेकर्स आयोजित</span>
+      <h1 class="display-4 mb-2">पन्हाळा ते पावनखिंड २०२६</h1>     
+      <h2 class="h3 mb-4"><i class="fa-solid fa-calendar-days me-2"></i>शनिवार दि. ११ जुलै ते रविवार दि. १२ जुलै २०२६</h2>
+      
+      <div class="row justify-content-center my-3">
+        <div class="col-md-8 bg-dark bg-opacity-40 p-3 rounded border border-warning border-opacity-50">
+          <p class="lead mb-1">"ही मोहीम बाजी, बांदलांच्या पराक्रमाची..."</p>
+          <p class="lead mb-0">"ही मोहीम वीर शिवा काशिदांच्या आत्माहुतीची..."</p>
+        </div>
+      </div>
+
+      <div class="h4 mt-4 text-warning">प्रवेश शुल्क: रू ७९९/- मात्र</div>
+      <div class="text-light small opacity-75">नावनोंदणीची अंतिम तारीख: ९ जुलै २०२६</div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <div class="container my-5">
+    
+    <!-- Inclusive Items & Details Section -->
+    <section id="details" class="mb-5">
+      <h3 class="section-title">🎒 मोहिमेचे स्वरूप व समाविष्ट बाबी</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header card-header-trek"><i class="fa-solid fa-circle-check me-2"></i>मोहिमेत समाविष्ट बाबी</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fa-solid fa-truck-ramp-box icon-bullet"></i> आपली बॅग मुक्कामाच्या ठिकाणी नेण्याची सोय संयोजकांकडे राहील.</li>
+              <li class="list-group-item"><i class="fa-solid fa-bus icon-bullet"></i> एस टी प्रवास (कोल्हापूर ते पन्हाळा व पावनखिंड ते कोल्हापूर) संयोजकांकडे असेल.</li>
+              <li class="list-group-item"><i class="fa-solid fa-utensils icon-bullet"></i> <b>दिवस १:</b> सकाळी नाष्टा, दुपारी खोतवाडी येथे जेवण, सायंकाळी चहा, रात्रीचे जेवण व मुक्काम.</li>
+              <li class="list-group-item"><i class="fa-solid fa-bowl-food icon-bullet"></i> <b>दिवस २:</b> सकाळी चहा-नाष्टा, दुपारी स्नेहभोजन.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 bg-warning bg-opacity-10 border border-warning border-opacity-25">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h4 class="text-warning-dark font-weight-bold mb-3" style="color: #ba5100;"><i class="fa-solid fa-person-shelter me-2"></i>विशेष सोय</h4>
+              <p class="lead">महिला सभासदांसाठी मुक्कामाच्या ठिकाणी <b>स्वतंत्र राहण्याची सोय</b> करण्यात आली आहे.</p>
+              <div class="mt-2 text-muted small"><i class="fa-solid fa-circle-info me-1"></i>अधिक माहितीसाठी खालील महिला संपर्क क्रमांकावर संपर्क साधू शकता.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="mb-5">
+      <h3 class="section-title">📅 मोहीम वेळापत्रक</h3>
+      <div class="row g-4">
+        <!-- Day 1 -->
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header card-header-trek bg-primary">
+              <i class="fa-solid fa-calendar-day me-2"></i><b>दिवस १: शनिवार दि. ११ जुलै २०२६</b>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>सकाळी ५.३० वाजता:</b> लाड चौक छ. शिवाजी पेठ येथे जमावे.</li>
+              <li class="list-group-item"><b>नाष्टा वेळ:</b> नाष्टा पार्सल घेऊन पन्हाळगड कडे रवाना.</li>
+              <li class="list-group-item"><b>पदभ्रमंती सुरुवात:</b> पन्हाळगड येथे वीर शिवा काशिद व बाजीप्रभू देशपांडे यांच्या पुतळ्यास मानवंदना देऊन राजदिंडी मार्गे पदभ्रमंतीस सुरुवात.</li>
+              <li class="list-group-item"><b>दुपारी:</b> खोतवाडी येथे जेवण पार्सल.</li>
+              <li class="list-group-item list-group-item-success"><b>रात्री:</b> कळकेवाडी येथे मुक्काम, चहा, जेवण.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Day 2 -->
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header card-header-trek">
+              <i class="fa-solid fa-calendar-day me-2"></i><b>दिवस २: रविवार दि. १२ जुलै २०२६</b>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>सकाळी ७ वाजता:</b> न्याहरी करून पावनखिंडकडे प्रस्थान.</li>
+              <li class="list-group-item"><b>पावनखिंड आगमन:</b> पावनखिंड येथे नरवीर बाजीप्रभू देशपांडे यांच्या स्मृतीचे पूजन करून पदभ्रमंतीची सांगता.</li>
+              <li class="list-group-item list-group-item-info"><b>सांगता:</b> पावनखिंड (मालाईवाडा) येथे स्नेहभोजन करून कोल्हापूरकडे रवाना.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Things to Bring Section -->
+    <section id="things-to-bring" class="mb-5">
+      <h3 class="section-title">🎒 सोबत आणावयाचे साहित्य</h3>
+      <div class="card text-dark bg-white">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <h5 class="text-success mb-3"><i class="fa-solid fa-clipboard-list me-2"></i>आवश्यक वस्तू:</h5>
+              <p class="text-secondary lh-lg">बॅग, वॉटर बॉटल, स्पोर्ट्स शूज, जादा कपडे, औषधे, टॉर्च, अंथरून, टॉवेल, रेनकोट, कोरडे खाद्यपदार्थ, अत्यावश्यक वस्तू सोबत आणाव्यात.</p>
+              <div class="alert alert-info py-2"><i class="fa-solid fa-circle-exclamation me-2"></i>स्वतःला झेपेल इतकेच साहित्य आणावे.</div>
+            </div>
+            <div class="col-md-6 border-start-md">
+              <h5 class="text-danger mb-3"><i class="fa-solid fa-triangle-exclamation me-2"></i>मौल्यवान वस्तूंबाबत सूचना:</h5>
+              <p class="text-secondary lh-lg">घड्याळ, कॅмера, दागिने, मोबाईल इत्यादी मौल्यवान वस्तू सभासदांनी <b>स्वतःच्या जबाबदारीवर</b> आणाव्यात.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rules & Regulations Section -->
+    <section id="rules" class="mb-5">
+      <h3 class="section-title">⚠️ नियम व अटी</h3>
+      <div class="card border-danger">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-danger font-weight-bold"><i class="fa-solid fa-ban me-2"></i>धूम्रपान, मद्यपान अन्य व्यसन करण्यास सक्त मनाई आहे. गैरवर्तन, बेशिस्तपणा केल्यास तात्काळ बाहेर काढण्यात येईल.</li>
+            <li class="list-group-item"><i class="fa-solid fa-clock icon-bullet"></i>सर्वांनी वेळेत हजर रहावे.</li>
+            <li class="list-group-item"><i class="fa-solid fa-indian-rupee-sign icon-bullet"></i>मोहिमेचे प्रवेश शुल्क रू ७९९/- राहील. एकदा भरलेली प्रवेश फी परत केली जाणार नाही.</li>
+            <li class="list-group-item"><i class="fa-solid fa-shield-halved icon-bullet"></i>ठरलेल्या कारेक्रमामध्ये कोणतेही बदल करण्याचे अधिकार संयोजकांकडे राहतील.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contact" class="mb-5">
+      <h3 class="section-title">📞 संपर्क व नावनोंदणी</h3>
+      <div class="row g-4">
+        <!-- Main Contacts -->
+        <div class="col-md-8">
+          <div class="card h-100 border-primary">
+            <div class="card-header bg-primary text-white font-weight-bold"><i class="fa-solid fa-phone me-2"></i>संयोजक संपर्क</div>
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="p-2 border rounded bg-light">
+                    <strong>दिग्विजय साळोखे:</strong> <br>
+                    <span class="text-primary"><i class="fa-solid fa-phone"></i> ९५७९८५९५२२</span> <br>
+                    <small class="text-success"><i class="fa-solid fa-wallet"></i> (GP Pay, Phone Pay)</small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-2 border rounded bg-light">
+                    <strong>गणेश कदम:</strong> <br>
+                    <span class="text-primary"><i class="fa-solid fa-phone"></i> ९६२३१८५०७१</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-2 border rounded bg-light">
+                    <strong>वरद मंडलिक:</strong> <br>
+                    <span class="text-primary"><i class="fa-solid fa-phone"></i> ९३२५७५२५३२</span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-2 border rounded bg-light">
+                    <strong>अवधूत शिंदे:</strong> <br>
+                    <span class="text-primary"><i class="fa-solid fa-phone"></i> ९५०३९५३५३५</span>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="p-2 border rounded bg-light">
+                    <strong>प्रतीक हेरवाडे (पुणे):</strong> 
+                    <span class="text-primary ms-2"><i class="fa-solid fa-phone"></i> ९७३०२४१२२४</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Leads -->
+        <div class="col-md-4">
+          <div class="card h-100 border-dark bg-dark text-white">
+            <div class="card-header bg-secondary text-white font-weight-bold"><i class="fa-solid fa-star me-2"></i>मोहीम प्रमुख व महिला संपर्क</div>
+            <div class="card-body d-flex flex-column justify-content-around">
+              <div class="p-3 border border-secondary rounded bg-opacity-10 bg-white">
+                <h6 class="text-warning"><i class="fa-solid fa-user-shield me-2"></i>मोहीम प्रमुख</h6>
+                <strong>ओंकार पाटील:</strong> <br>
+                <span><i class="fa-solid fa-phone me-1"></i> ८४५९८७९९८९</span>
+              </div>
+              <div class="p-3 border border-secondary rounded bg-opacity-10 bg-white mt-3">
+                <h6 class="text-info"><i class="fa-solid fa-person-dress me-2"></i>महिलांसाठी संपर्क</h6>
+                <strong>श्रावणी साळोखे:</strong> <br>
+                <span><i class="fa-solid fa-phone me-1"></i> ८५३०८७२८४२</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Registration Modal - Fixed With Bootstrap 5 Properties[cite: 1] -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg">
+        
+        <!-- Modal Header -->
+        <div class="modal-header bg-dark text-white border-bottom border-warning">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <i class="fa-solid fa-file-signature text-warning me-2"></i>📝 नोंदणी फॉर्म व शुल्क माहिती
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="modal-body p-0 bg-light">
+          <section id="pricing" class="py-3">
+            <div class="container-fluid">       
+              <div class="row">
+                <div class="col-12">
+                  <ul class="list-group list-group-flush rounded-3 shadow-sm">
+                    <li class="list-group-item p-4">              
+                      <p class="lead mb-3 text-dark lh-base">
+                        ● मोहिमेचे प्रवेश शुल्क <b>₹७९९/-</b> असून, नावनोंदणीची अंतिम तारीख <b>९ जुलै २०२६</b> राहील. 
+                      </p>
+                      <p class="mb-4 text-secondary">
+                        प्रवेश शुल्क तुम्ही खालील बटणावर क्लिक करून थेट भरू शकता किंवा 
+                        <b>दिग्विजय साळोखे: ९५७९८५९५२२</b> या क्रमांकावर Google Pay (GP Pay) किंवा PhonePe द्वारे जमा करून स्क्रीनशॉट पाठवू शकता.
+                      </p>
+                      
+                      <!-- UPI Payment Button -->
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-3">
+                        <a target="_blank" href="upi://pay?pa=sakal.javascript@okhdfcbank&pn=Sakal_Patil&am=699&cu=INR&tn=WebsiteOrder" class="btn btn-success btn-lg px-4 shadow-sm">
+                          <i class="fa-solid fa-wallet me-2"></i>₹७९९ भरा (UPI)
+                        </a>
+                      </div>
+                
+                      <!-- Alternative Link -->
+                      <div class="alert alert-warning border border-warning-subtle d-flex align-items-center mt-3" id="modalError">
+                        <i class="fa-solid fa-circle-exclamation text-warning me-2 fs-5"></i>
+                        <div>
+                          ❗ खाली दिलेला फॉर्म लोड झाला नसल्यास किंवा काही अडчण आल्यास 
+                          <a href="https://forms.gle/YoB5UwNfJ83ZcH9G6" target="_blank" class="alert-link text-decoration-underline">येथे क्लिक करून</a> थेट गुगल फॉर्म भरा.
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>    
+          </section>       
+          
+          <!-- Responsive Google Form Embed Iframe -->
+          <div class="ratio ratio-4x3 border-top" style="min-height: 500px;">
+            <iframe src="https://forms.gle/YoB5UwNfJ83ZcH9G6" title="Google Registration Form" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+        <!-- Modal Footer -->
+        <div class="modal-footer bg-light border-top-0">
+          <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">बंद करा</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modern Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5 border-top border-secondary border-opacity-25">
+    <div class="container">
+      <p class="mb-1">&copy; २०२६ स्वराज्य रक्षक ट्रेकर्स. सर्व हक्क सुरक्षित.</p>
+      <small class="text-muted opacity-70">पन्हाळा ते पावनखिंड ऐतिहासिक पदभ्रमंती मोहीम २०२६</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 and Popper JavaScript Bundle (Required for modal to open)[cite: 1] -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
